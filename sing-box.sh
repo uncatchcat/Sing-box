@@ -165,7 +165,7 @@ install_singbox() {
     chown root:root ${work_dir} && chmod +x ${work_dir}/${server_name} ${work_dir}/argo ${work_dir}/qrencode
 
    # 生成随机端口和密码
-    vless_port=$(shuf -i 1000-65535 -n 1) 
+    vless_port=$(shuf -i 35952-35990 -n 1) 
     nginx_port=$(($vless_port + 1)) 
     tuic_port=$(($vless_port + 2))
     hy2_port=$(($vless_port + 3)) 
